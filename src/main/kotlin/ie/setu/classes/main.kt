@@ -9,6 +9,12 @@ fun main(args: Array<String>)
 
     for ((index, value) in persons.withIndex())
         println("$index: $value")
+
+    println("\nSorting by last Name, last name Uppercased:\n")
+    persons
+        .sortedBy{it.lastName}
+        .forEach{println("Person: ${it.firstName}, ${it.lastName.uppercase()}")}
+
 }
 
 fun personInfo() {
